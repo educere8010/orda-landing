@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="정해진 범위를 암기하는 데 멈추지 않고, 스스로 점검하고 적용하는 공부를 위한 오르다 3분 학습상태 점검입니다.">
+  <meta name="theme-color" content="#0b1f32">
+  <title>3분 학습상태 점검 | 에듀케레 오르다</title>
+  <link rel="icon" href="favicon.ico?v=2">
+  <style>
+    :root{--navy:#0b2135;--navy2:#123c4b;--teal:#118477;--teal2:#22aa97;--mint:#eaf7f4;--amber:#f4b942;--cream:#f7f3ea;--ink:#172333;--muted:#687984;--line:#dbe6e4;--white:#fff;--danger:#b54b42}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink);background:radial-gradient(circle at 85% 6%,rgba(34,170,151,.14),transparent 27%),linear-gradient(180deg,#f7fbfa,var(--cream));min-height:100vh}
+    button,input,select{font:inherit}.wrap{width:min(760px,calc(100% - 34px));margin:0 auto}.top{padding:20px 0}.brand{display:inline-flex;align-items:center;gap:10px;color:var(--navy);font-weight:950;text-decoration:none;letter-spacing:-.03em}.brand i{width:30px;height:30px;display:grid;place-items:center;background:var(--navy);color:var(--amber);border-radius:10px;font-style:normal}.shell{padding:22px 0 70px}
+    .card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:26px;box-shadow:0 22px 65px rgba(17,52,61,.11);overflow:hidden}.hero{padding:44px 42px 34px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;position:relative}.hero:after{content:"ORDA";position:absolute;right:-5px;bottom:-22px;font-size:100px;font-weight:950;color:rgba(255,255,255,.045);letter-spacing:-.08em}.eyebrow{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#b9ede4;font-size:12px;font-weight:800}.eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amber)}h1{font-size:clamp(31px,6vw,47px);line-height:1.15;letter-spacing:-.055em;margin:17px 0 13px}.hero p{position:relative;z-index:1;margin:0;color:#c6d7de;line-height:1.75;font-size:15px;max-width:610px}.content{padding:34px 42px 42px}.intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:28px}.mini{padding:15px;border:1px solid var(--line);border-radius:16px;background:#fbfdfd}.mini b{display:block;color:var(--teal);font-size:13px;margin-bottom:4px}.mini span{font-size:12px;color:var(--muted);line-height:1.5}.notice{padding:15px 17px;background:#fff8e7;border:1px solid #f0d99e;border-radius:14px;color:#72531d;font-size:12px;line-height:1.7;margin:0 0 24px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:0;border-radius:14px;min-height:50px;padding:13px 20px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:.18s}.btn:hover{transform:translateY(-1px)}.btn.primary{color:#10263a;background:var(--amber);box-shadow:0 10px 24px rgba(244,185,66,.24)}.btn.teal{color:#fff;background:var(--teal)}.btn.light{color:var(--navy);background:var(--mint)}.btn.wide{width:100%}
+    .progress-wrap{margin-bottom:28px}.progress-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:9px}.progress-top b{font-size:13px}.progress-top span{font-size:12px;color:var(--muted)}.track{height:9px;background:#e9efee;border-radius:99px;overflow:hidden}.track i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--teal2));border-radius:inherit;transition:width .3s}.question-tag{color:var(--teal);font-size:12px;font-weight:900;letter-spacing:.06em}.question h2{font-size:clamp(22px,4vw,29px);line-height:1.45;letter-spacing:-.035em;margin:10px 0 24px}.options{display:grid;gap:10px}.option{width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:16px;padding:16px 17px;cursor:pointer;font-weight:750;line-height:1.45;transition:.17s}.option:hover,.option:focus{border-color:var(--teal2);background:var(--mint);outline:none}.option small{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:8px;background:#eef4f3;color:var(--teal);margin-right:9px;font-weight:900}.back{margin-top:18px;border:0;background:none;color:var(--muted);cursor:pointer;padding:7px 0;font-weight:750}
+    .result-head{text-align:center;padding-bottom:27px;border-bottom:1px solid var(--line)}.result-kicker{font-size:12px;color:var(--teal);font-weight:900;letter-spacing:.08em}.result-icon{width:70px;height:70px;margin:0 auto 16px;display:grid;place-items:center;border-radius:22px;background:var(--mint);font-size:32px}.result-head h2{font-size:30px;letter-spacing:-.045em;margin:7px 0 10px}.result-head p{font-size:14px;color:var(--muted);line-height:1.75;margin:0}.bars{margin:27px 0}.bar-row{margin:0 0 15px}.bar-label{display:flex;justify-content:space-between;font-size:13px;font-weight:850;margin-bottom:7px}.bar-label span:last-child{color:var(--teal)}.bar-track{height:10px;background:#eaf0ef;border-radius:99px;overflow:hidden}.bar-track i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--teal2));border-radius:inherit}.guide{padding:21px;border-radius:18px;background:var(--mint);margin:0 0 22px}.guide b{display:block;color:var(--teal);margin-bottom:7px}.guide p{margin:0;font-size:13px;line-height:1.75;color:#405762}.consult{border:1.5px solid #e8cb87;border-radius:20px;background:#fffaf0;padding:24px}.consult h3{margin:0 0 7px;font-size:20px}.consult>p{margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.65}.field{display:grid;gap:6px;margin-bottom:11px}.field label{font-size:12px;font-weight:850}.field input,.field select{width:100%;border:1.5px solid var(--line);border-radius:12px;background:#fff;padding:12px 13px;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:var(--teal)}.cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}.agree{display:flex;align-items:flex-start;gap:9px;margin:14px 0;font-size:11px;color:var(--muted);line-height:1.55}.agree input{margin-top:2px}.privacy{padding:12px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:10.5px;color:#71808a;line-height:1.6}.status{font-size:12px;margin-top:10px;color:var(--danger);min-height:18px}.done{text-align:center;padding:20px 8px}.done strong{display:block;font-size:22px;margin-bottom:9px}.done p{font-size:13px;color:var(--muted);line-height:1.7}.footer{text-align:center;color:#7b898f;font-size:11px;padding:24px 0 0;line-height:1.7}
+    [hidden]{display:none!important}@media(max-width:600px){.hero{padding:34px 24px 27px}.content{padding:27px 23px 31px}.intro-grid{grid-template-columns:1fr}.mini{padding:13px}.cols{grid-template-columns:1fr}.actions .btn{width:100%}.consult{padding:20px 17px}.shell{padding-top:8px}}
+  </style>
+</head>
+<body>
+  <header class="top wrap"><a class="brand" href="intro.html"><i>O</i>오르다 ORDA</a></header>
+  <main class="shell wrap">
+    <section class="card" id="startScreen">
+      <div class="hero">
+        <span class="eyebrow">에듀케레 오르다 공개 점검</span>
+        <h1>나는 지금,<br>어떻게 공부하고 있을까?</h1>
+        <p>성적을 매기는 시험이 아닙니다. 정해진 범위를 암기하는 학습에 멈추지 않고, 스스로 점검하고 배운 개념을 꺼내 쓰는 공부가 되고 있는지 확인해보세요.</p>
+      </div>
+      <div class="content">
+        <div class="intro-grid">
+          <div class="mini"><b>12개 질문</b><span>문제나 정답은 공개하지 않는 학습 습관 점검</span></div>
+          <div class="mini"><b>약 3분</b><span>평소 내 모습과 가장 가까운 답을 선택</span></div>
+          <div class="mini"><b>4가지 영역</b><span>계획 · 점검 · 적용 · 기록의 현재 상태 확인</span></div>
+        </div>
+        <p class="notice">이 결과는 학업 성취도나 과목별 수준을 판정하지 않습니다. 정밀 영어·수학 레벨진단은 상담 후 개별 안내합니다.</p>
+        <div class="actions"><button class="btn primary wide" type="button" onclick="startCheck()">3분 점검 시작하기 →</button></div>
+      </div>
+    </section>
+
+    <section class="card" id="quizScreen" hidden>
+      <div class="content">
+        <div class="progress-wrap"><div class="progress-top"><b>학습상태 점검</b><span id="countText">1 / 12</span></div><div class="track"><i id="progressBar"></i></div></div>
+        <div class="question"><span class="question-tag" id="domainText">PLAN</span><h2 id="questionText"></h2><div class="options" id="options"></div><button class="back" id="backBtn" type="button" onclick="goBack()">← 이전 질문</button></div>
+      </div>
+    </section>
+
+    <section class="card" id="resultScreen" hidden>
+      <div class="content">
+        <div class="result-head"><div class="result-icon" id="resultIcon">🧭</div><span class="result-kicker">ORDA LEARNING CHECK</span><h2 id="resultTitle"></h2><p id="resultSummary"></p></div>
+        <div class="bars" id="resultBars"></div>
+        <div class="guide"><b>오르다가 제안하는 다음 연습</b><p id="resultGuide"></p></div>
+        <div class="consult" id="consultBox">
+          <h3>정밀 레벨진단 상담 신청</h3>
+          <p>공개 점검 결과를 바탕으로 상담한 뒤, 필요한 경우 영어·수학 정밀 레벨진단을 개별 안내합니다.</p>
+          <div class="cols"><div class="field"><label for="guardian">보호자 성함</label><input id="guardian" autocomplete="name" placeholder="예: 김보호"></div><div class="field"><label for="studentName">학생 이름</label><input id="studentName" autocomplete="off" placeholder="예: 이오름"></div></div>
+          <div class="cols"><div class="field"><label for="grade">학생 학년</label><select id="grade"><option value="">선택해주세요</option><option>초등 4학년 이하</option><option>초등 5학년</option><option>초등 6학년</option><option>중등 1학년</option><option>중등 2학년</option><option>중등 3학년</option><option>고등 1학년</option><option>고등 2학년</option><option>고등 3학년</option></select></div><div class="field"><label for="subject">상담 과목</label><select id="subject"><option value="">선택해주세요</option><option>영어</option><option>수학</option><option>영어 + 수학</option><option>아직 정하지 못함</option></select></div></div>
+          <div class="field"><label for="contact">연락처</label><input id="contact" type="tel" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000"></div>
+          <div class="privacy">수집 항목: 보호자 성함, 학생 이름·학년, 연락처, 상담 과목 · 이용 목적: 정밀진단 및 학습상담 연락 · 보유 기간: 상담 완료 후 3개월. 동의를 거부할 수 있으나 상담 신청이 제한될 수 있습니다.</div>
+          <label class="agree"><input id="agree" type="checkbox">위 개인정보 수집·이용 안내를 확인했으며 이에 동의합니다.</label>
+          <button class="btn teal wide" type="button" onclick="sendConsult()">정밀진단 상담 신청하기</button><div class="status" id="formStatus" aria-live="polite"></div>
+        </div>
+        <div class="actions" style="margin-top:18px"><button class="btn light wide" type="button" onclick="restartCheck()">다시 점검하기</button></div>
+      </div>
+    </section>
+    <p class="footer">에듀케레 영수학원 · 양산 물금 · 055.363.8010<br>본 점검은 상담을 위한 참고 자료이며 학업 성취도를 판정하는 검사가 아닙니다.</p>
+  </main>
+
+  <form name="diagnosis-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input name="bot-field"><input name="guardian"><input name="student_name"><input name="grade"><input name="contact"><input name="subject"><input name="result_type"><input name="result_scores"><input name="source">
+  </form>
+
+  <script>
+    const QUESTIONS=[
+      {d:"plan",q:"공부를 시작할 때, 오늘 무엇을 어디까지 할지 먼저 정한다."},
+      {d:"monitor",q:"문제를 틀렸을 때, 개념·해석·계산 중 어디서 막혔는지 찾아본다."},
+      {d:"apply",q:"배운 개념을 보지 않고 내 말로 설명해보거나 다른 문제에 써본다."},
+      {d:"record",q:"틀린 이유나 풀이의 근거를 나중에 다시 볼 수 있게 남긴다."},
+      {d:"plan",q:"시험범위가 정해져도, 이미 아는 부분과 다시 볼 부분을 나누어 계획한다."},
+      {d:"monitor",q:"정답을 맞혔어도 풀이가 불확실했다면 아직 모르는 것으로 표시한다."},
+      {d:"apply",q:"자료나 조건이 달라진 문제에서도 어떤 개념을 써야 할지 먼저 생각한다."},
+      {d:"record",q:"노트에는 정답만 옮기기보다 왜 그렇게 풀었는지 과정을 적는다."},
+      {d:"plan",q:"누가 시키지 않아도 부족한 영역을 보고 다음 공부를 스스로 정할 수 있다."},
+      {d:"monitor",q:"공부를 마친 뒤, 오늘 새로 알게 된 것과 아직 헷갈리는 것을 구분한다."},
+      {d:"apply",q:"외운 공식이나 문법 규칙을 문제 상황에 맞게 바꾸어 사용할 수 있다."},
+      {d:"record",q:"같은 실수를 반복하지 않도록 이전 기록을 다시 확인하고 수정한다."}
+    ];
+    const SCALE=["거의 그렇지 않다","가끔 그렇다","대체로 그렇다","매우 그렇다"];
+    const META={plan:{name:"방향 세우기",tag:"PLAN",icon:"🧭"},monitor:{name:"빈틈 점검",tag:"CHECK",icon:"🔎"},apply:{name:"개념 적용",tag:"APPLY",icon:"🧩"},record:{name:"생각 기록",tag:"RECORD",icon:"✍️"}};
+    const RESULT={
+      plan:{title:"방향부터 세우면 더 잘 오르는 유형",summary:"공부할 의지는 있지만, 무엇을 먼저 하고 어디까지 할지 정하는 연습이 더 필요해 보여요.",guide:"오늘 할 공부를 ‘과목’이 아니라 ‘개념 1개 + 문제 5개 + 틀린 이유 1줄’처럼 작은 행동으로 정해보세요."},
+      monitor:{title:"아는 것과 모르는 것을 나눌 때 성장하는 유형",summary:"공부한 양보다 이해의 빈틈을 스스로 발견하는 힘을 기르면 학습 효율이 더 좋아질 수 있어요.",guide:"정답 여부 옆에 확실함·헷갈림·모름을 표시하고, 헷갈림도 다시 공부할 목록에 넣어보세요."},
+      apply:{title:"배운 개념을 꺼내 쓰는 연습이 필요한 유형",summary:"익숙한 문제는 풀 수 있어도 자료나 조건이 달라지면 개념을 선택하는 과정이 어려울 수 있어요.",guide:"문제를 풀기 전 ‘이 문제에서 묻는 것·주어진 조건·쓸 개념’을 한 줄씩 적고 풀이를 시작해보세요."},
+      record:{title:"생각의 과정을 남기면 단단해지는 유형",summary:"공부한 내용이 그날로 지나가지 않도록 풀이 근거와 막힌 지점을 기록하는 습관이 도움이 돼요.",guide:"오답을 베끼기보다 ‘왜 틀렸는지·다음에는 무엇을 확인할지’를 자신의 말로 두 줄만 남겨보세요."}
+    };
+    let step=0,answers=[],lastResult=null;
+    const $=id=>document.getElementById(id);
+    function show(id){["startScreen","quizScreen","resultScreen"].forEach(x=>$(x).hidden=x!==id);window.scrollTo({top:0,behavior:"smooth"})}
+    function startCheck(){step=0;answers=[];show("quizScreen");renderQuestion()}
+    function renderQuestion(){const item=QUESTIONS[step];$("countText").textContent=(step+1)+" / "+QUESTIONS.length;$("progressBar").style.width=((step+1)/QUESTIONS.length*100)+"%";$("domainText").textContent=META[item.d].tag;$("questionText").textContent=item.q;$("backBtn").hidden=step===0;$("options").innerHTML=SCALE.map((v,i)=>`<button class="option" type="button" onclick="choose(${i+1})"><small>${i+1}</small>${v}</button>`).join("")}
+    function choose(value){answers[step]=value;if(step<QUESTIONS.length-1){step++;renderQuestion()}else{renderResult()}}
+    function goBack(){if(step>0){step--;renderQuestion()}}
+    function renderResult(){const scores={plan:0,monitor:0,apply:0,record:0};QUESTIONS.forEach((q,i)=>scores[q.d]+=answers[i]);const weakest=Object.keys(scores).sort((a,b)=>scores[a]-scores[b])[0];lastResult={weakest,scores};const r=RESULT[weakest];$("resultIcon").textContent=META[weakest].icon;$("resultTitle").textContent=r.title;$("resultSummary").textContent=r.summary;$("resultGuide").textContent=r.guide;$("resultBars").innerHTML=Object.keys(scores).map(k=>{const pct=Math.round(scores[k]/12*100);return `<div class="bar-row"><div class="bar-label"><span>${META[k].name}</span><span>${pct}%</span></div><div class="bar-track"><i style="width:${pct}%"></i></div></div>`}).join("");show("resultScreen")}
+    function restartCheck(){step=0;answers=[];lastResult=null;$("consultBox").innerHTML=CONSULT_HTML;show("startScreen")}
+    const CONSULT_HTML=$("consultBox").innerHTML;
+    async function sendConsult(){const guardian=$("guardian").value.trim(),student_name=$("studentName").value.trim(),grade=$("grade").value,contact=$("contact").value.trim(),subject=$("subject").value,status=$("formStatus");if(!guardian||!student_name||!grade||!contact||!subject){status.textContent="모든 항목을 입력해주세요.";return}if(!/^01[016789]-?\d{3,4}-?\d{4}$/.test(contact.replace(/\s/g,""))){status.textContent="연락처를 확인해주세요.";return}if(!$("agree").checked){status.textContent="개인정보 수집·이용 동의가 필요합니다.";return}const result_scores=Object.fromEntries(Object.keys(lastResult.scores).map(k=>[k,{name:META[k].name,score:lastResult.scores[k],max:12}]));const body={guardian,student_name,grade,contact,subject,result_type:RESULT[lastResult.weakest].title,result_scores,source:"orda-learning-check",consent:true,website:""};status.style.color="var(--teal)";status.textContent="신청 내용을 보내는 중입니다...";try{const res=await fetch("/api/diagnosis-public",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});const data=await res.json().catch(()=>({}));if(!res.ok)throw new Error(data.error||"");$("consultBox").innerHTML='<div class="done"><strong>상담 신청이 접수되었습니다.</strong><p>학습상태 점검 결과와 신청 내용을 확인한 뒤 연락드리겠습니다.<br>빠른 문의는 <a href="tel:0553638010">055.363.8010</a>으로 전화해주세요.</p></div>'}catch(e){status.style.color="var(--danger)";status.textContent=e.message||"전송하지 못했습니다. 잠시 후 다시 시도하거나 055.363.8010으로 문의해주세요."}}
+  </script>
+</body>
+</html>
